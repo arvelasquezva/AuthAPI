@@ -8,6 +8,11 @@ export const accountTypeDef = `
       password: String!
   }`;
 
+export const accountQueries = `
+      allAccounts: [Account]!
+
+  `;
+
 export const accountMutations = `
     createAccount(account: AccountInput!): Account!
 `;

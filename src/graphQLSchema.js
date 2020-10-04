@@ -6,6 +6,7 @@ import { mergeSchemas } from './utilities';
 
 import {
 	accountMutations
+	accountTypeDef
 } from './auth/account/typeDefs';
 
 import accountResolvers from './auth/account/resolvers';
@@ -15,9 +16,6 @@ const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
 		accountTypeDef
-	],
-	[
-		accountQueries
 	],
 	[
 		accountMutations

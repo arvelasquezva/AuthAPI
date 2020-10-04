@@ -5,7 +5,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { mergeSchemas } from './utilities';
 
 import {
-	accountMutations
+	accountMutations,
 	accountTypeDef
 } from './auth/account/typeDefs';
 

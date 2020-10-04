@@ -5,24 +5,22 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { mergeSchemas } from './utilities';
 
 import {
-	categoryMutations,
-	categoryQueries,
-	categoryTypeDef
-} from './auth/categories/typeDefs';
+	accountMutations
+} from './auth/account/typeDefs';
 
-import categoryResolvers from './auth/categories/resolvers';
+import accountResolvers from './auth/account/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		categoryTypeDef
+		accountTypeDef
 	],
 	[
-		categoryQueries
+		accountQueries
 	],
 	[
-		categoryMutations
+		accountMutations
 	]
 );
 
@@ -31,6 +29,6 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		categoryResolvers
+		accountResolvers
 	)
 });

@@ -8,10 +8,6 @@ export const accountTypeDef = `
       password: String!
   }`;
 
-export const accountQueries = `
-      allCategories: [Account]!
-  `;
-
 export const accountMutations = `
     createAccount(account: AccountInput!): Account!
 `;

@@ -10,9 +10,9 @@ export const accountTypeDef = `
 
 export const accountQueries = `
       allAccounts: [Account]!
-
   `;
 
 export const accountMutations = `
-    createAccount(account: AccountInput!): Account!
+    signUp(account: AccountInput!): Account!
+    signIn(account: AccountInput!): Account!
 `;

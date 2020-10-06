@@ -1,10 +1,10 @@
 export const accountTypeDef = `
   type Account {
-      nickName: String!
+      username: String!
       password: String!
   }
   input AccountInput {
-      nickName: String!
+      username: String!
       password: String!
   }`;
 

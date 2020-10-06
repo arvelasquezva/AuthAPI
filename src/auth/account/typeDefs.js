@@ -2,6 +2,7 @@ export const accountTypeDef = `
   type Account {
       username: String!
       password: String!
+      token: String!
   }
   input AccountInput {
       username: String!

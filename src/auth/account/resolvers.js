@@ -1,12 +1,14 @@
 import { generalRequest, getRequest } from '../../utilities';
-import { url, port, entryPoint } from './server';
+import { url, port, signUpentryPoint, signInentryPoint } from './server';
 
-const URL = `http://${url}:${port}/${entryPoint}`;
+const URL = `http://${url}:${port}`;
 
 const resolvers = {
 	Mutation: {
-		createAccount: (_, { account }) =>
-			generalRequest(`${URL}/`, 'POST', account),
+		signUp: (_, { account }) =>
+			generalRequest(`${URL}/${signUpentryPoint}`, 'POST', account),
+		signIn: (_, { account }) =>
+			generalRequest(`${URL}/${signInentryPoint}`, 'POST', account)
 	}
 };
 

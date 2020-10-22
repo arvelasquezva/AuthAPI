@@ -3,17 +3,21 @@ export const accountTypeDef = `
       username: String!
       password: String!
       token: String!
+      uid: String!
   }
   input AccountInput {
       username: String!
       password: String!
+  }
+  input Token {
+      token: String!
   }`;
 
 export const accountQueries = `
-      allAccounts: [Account]!
+      auth(token: Token!): Boolean!
+      signIn(account: AccountInput!): Account!
   `;
 
 export const accountMutations = `
     signUp(account: AccountInput!): Account!
-    signIn(account: AccountInput!): Account!
 `;

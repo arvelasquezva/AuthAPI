@@ -1,0 +1,5 @@
+export const url = '54.152.226.20'
+export const port = '3001'
+export const signUpPoint = 'signUp'
+export const signInPoint = 'signIn'
+export const authPoint = 'auth'
